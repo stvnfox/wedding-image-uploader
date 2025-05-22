@@ -17,6 +17,7 @@ export const ImagesOverview = () => {
 					width={300}
 					height={300}
 					alt={""}
+					className="rounded-md"
 				/>
 			))}
 		</div>
