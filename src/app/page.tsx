@@ -1,4 +1,5 @@
 import { ImageUpload } from "@/components/image-upload/image-upload";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
 	return (
