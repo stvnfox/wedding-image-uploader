@@ -8,8 +8,6 @@ import { api } from "convex/_generated/api";
 export const ImagesOverview = () => {
 	const images = useQuery(api.images.getImages);
 
-	console.log(images);
-
 	return (
 		<div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
 			{images?.map((image) => (
