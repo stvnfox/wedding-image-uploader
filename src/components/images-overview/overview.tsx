@@ -1,23 +1,22 @@
 "use client";
 
 import { useQuery } from "convex/react";
-import Image from "next/image";
 
 import { api } from "convex/_generated/api";
+
+import { ImageCard } from "./image-card";
 
 export const ImagesOverview = () => {
 	const images = useQuery(api.images.getImages);
 
 	return (
-		<div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+		<div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-auto">
 			{images?.map((image) => (
-				<Image
+				<ImageCard
 					key={image._id}
-					src={image.url}
-					width={300}
-					height={300}
-					alt={""}
-					className="rounded-md"
+					url={image.url}
+					id={image._id}
+					images={images}
 				/>
 			))}
 		</div>
